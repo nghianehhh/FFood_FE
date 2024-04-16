@@ -1,0 +1,406 @@
+/** @format */
+.home-header-container {
+      width: 100%;
+      background-color: #ffee81;
+      height: 72px;
+      z-index: 100;
+      position: fixed;
+      .home-header-content {
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left-content {
+                  display: flex;
+                  align-items: center;
+                  height: 100%;
+                  width: 20%;
+                  justify-content: space-between;
+                  .header-logo {
+                        .img-logo-food {
+                              height: 64px;
+                        }
+                  }
+                  .select-area {
+                        font-size: 1.4rem;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 8px;
+                        margin-left: 24px;
+                        border-color: bisque;
+                        background-color: #fadb06;
+                        cursor: pointer;
+                  }
+                  .select-area:focus {
+                        outline: none;
+                  }
+            }
+            .center-content {
+                  height: 100%;
+                  width: 50%;
+                  justify-content: space-between;
+                  display: flex;
+                  align-items: center;
+                  font-size: 1.6rem;
+                  font-weight: 300;
+                  margin: 0 16px;
+                  .type-food {
+                        padding: 8px 24px;
+                        &:hover {
+                              background-color: #ffe312;
+                              color: #ff5f29;
+                              cursor: pointer;
+                              border-radius: 8px;
+                        }
+                  }
+                  .active {
+                        color: #ff5f29;
+                  }
+                  .line {
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 6px;
+                        border-radius: 15px;
+                        background-color: #ff5f29;
+                        transition: width 1s ease;
+                  }
+                  .active.line {
+                        color: #ff5f29;
+                        width: 100%;
+                  }
+            }
+            .right-content {
+                  width: 25%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  font-size: 1.4rem;
+                  .house {
+                        position: relative;
+                        width: 36px;
+                        .icon-house {
+                              height: 24px;
+                              color: #555555;
+                              transition: height 250ms ease-in-out;
+                              &:hover {
+                                    cursor: pointer;
+                                    color: #ff5f29;
+                                    height: 26px;
+                              }
+                        }
+                  }
+                  .search {
+                        // position: relative;
+                        width: 36px;
+                        text-align: center;
+                        .icon-search {
+                              height: 24px;
+                              color: #555555;
+                              transition: height 250ms ease-in-out;
+                              &:hover {
+                                    color: #ff5f29;
+                                    cursor: pointer;
+                                    height: 26px;
+                              }
+                        }
+                        .over-screen {
+                              width: 100%;
+                              top: 72px;
+                              height: 0px;
+                              background-color: #d8d8d85e;
+                              position: absolute;
+                              left: 0;
+                              // -webkit-transform: translateY(0);
+                              // transform: tran;
+                              transition: height 250ms ease-in-out;
+                              .wrap-search {
+                                    width: 100%;
+                                    height: 0px;
+                                    background-color: white;
+                                    position: relative;
+                                    left: 0;
+                                    overflow: hidden;
+                                    // -webkit-transform: translateY(0);
+                                    // transform: tran;
+                                    transition: height 200ms ease-in-out;
+                              }
+                        }
+                        .over-screen.active {
+                              // -webkit-transform: translateY(100%);
+                              height: calc(100vh - 72px);
+                              // transform: height(80vh);
+                              .wrap-search.active {
+                                    // -webkit-transform: translateY(100%);
+                                    height: calc(60vh - 72px);
+                                    // transform: height(80vh);
+                              }
+                              .cancel-search {
+                                    height: calc(40vh + 72px);
+                              }
+                        }
+                  }
+                  .cart {
+                        position: relative;
+                        width: 36px;
+                        .icon-cart {
+                              height: 24px;
+                              color: #555555;
+                              transition: height 250ms ease-in-out;
+                              &:hover {
+                                    cursor: pointer;
+                                    color: #ff5f29;
+                                    height: 26px;
+                              }
+                        }
+                        .cart-items-value {
+                              text-align: center;
+                              border-radius: 12px;
+                              background: #ffffff;
+                              width: 24px;
+                              height: 24px;
+                              position: absolute;
+                              top: -12px;
+                              right: -8px;
+                              color: #ff5f29;
+                        }
+                  }
+                  .notifycation {
+                        position: relative;
+                        width: 36px;
+                        text-align: center;
+                        .icon-bell {
+                              height: 24px;
+                              color: #555555;
+                              transition: height 250ms ease-in-out;
+                              &:hover {
+                                    cursor: pointer;
+                                    color: #ff5f29;
+                                    height: 26px;
+                              }
+                        }
+                  }
+                  .over-notifycation {
+                        width: 500px;
+                        top: 72px;
+                        background-color: #d8d8d85e;
+                        position: absolute;
+                        height: 0px;
+                        overflow: hidden;
+                        transition: height 250ms ease-in-out;
+                        .wrap-notifycation {
+                              width: 500px;
+                              height: 100px;
+                              background-color: white;
+                              position: relative;
+                              overflow: hidden;
+                              right: -500px;
+                              transition: right 200ms ease-in-out;
+                              .content-notifycation {
+                                    margin: 8px;
+                                    .close-notifycation {
+                                          position: absolute;
+                                          height: 20px;
+                                          width: 20px;
+                                          top: 50px;
+                                          right: 16px;
+                                          z-index: 1;
+                                          .icon-close {
+                                                height: 20px;
+                                                position: absolute;
+                                                right: 12px;
+                                                opacity: 0.6;
+                                                &:hover {
+                                                      opacity: 1;
+                                                }
+                                          }
+                                    }
+                                    .wrap-tostify {
+                                          width: 100%;
+                                          height: 86px;
+                                          background-color: red;
+                                          border-radius: 16px;
+                                          margin-bottom: 16px;
+                                          position: relative;
+                                          .wrap-content {
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                .item-content {
+                                                      color: white;
+                                                      width: 100%;
+                                                      text-align: center;
+                                                }
+                                          }
+                                          .line {
+                                                width: calc(100% - 4px);
+                                                border-radius: 4px;
+                                                height: 4px;
+                                                margin: 0px 4px;
+                                                position: absolute;
+                                                bottom: 0px;
+                                                background-color: #fadb06;
+                                                transition: width 5000ms ease-in-out;
+                                          }
+                                          .line.active {
+                                                width: 0;
+                                          }
+                                    }
+                              }
+                        }
+                        .wrap-notifycation.active {
+                              right: 0px;
+                        }
+                  }
+                  .over-notifycation.active {
+                        height: 500px;
+                  }
+
+                  .login {
+                        cursor: pointer;
+                        opacity: 0.9;
+                        &:hover {
+                              opacity: 1;
+                              box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+                        }
+                  }
+                  .btn {
+                        height: 36px;
+                        display: flex;
+
+                        .btn-login {
+                              width: 100px;
+                              height: 36px;
+                              background-color: #fadb06;
+                              display: flex;
+                              border-radius: 40px;
+                              align-items: center;
+                              justify-content: center;
+                              &:hover {
+                                    cursor: pointer;
+                                    opacity: 0.9;
+                              }
+                              .login {
+                                    color: #555555;
+                                    width: 100%;
+                                    font-size: 1rem;
+                                    box-shadow: none;
+                                    transition: font-size 250ms linear;
+                                    &:hover {
+                                          color: #ff5f29;
+                                          font-size: 1.025rem;
+                                    }
+                              }
+                              &:hover {
+                                    box-shadow: 0 0 11px #fadb06;
+                              }
+                        }
+                        .btn-logout {
+                              width: 100%;
+                              height: 48px;
+                              background-color: #f3e278;
+                              font-size: 15px;
+                              display: flex;
+                              border-radius: 8px;
+                              align-items: center;
+                              justify-content: center;
+                              :hover {
+                                    cursor: pointer;
+                                    opacity: 0.9;
+                              }
+                        }
+                        .btn-logout:hover {
+                              background-color: #fadb06;
+                              color: white;
+                        }
+                        .user-setting {
+                              display: flex;
+                              align-items: center;
+                              h2 {
+                                    margin: 0;
+                              }
+                              .icon-user {
+                                    color: #555555;
+                                    margin-left: 12px;
+                                    height: 20px;
+                                    border: 2px solid;
+                                    border-radius: 50%;
+                                    padding: 4px 6px;
+                              }
+                              .option-setting {
+                                    background-color: #f3e278;
+                                    border-radius: 8px;
+                                    position: absolute;
+                                    top: 65px;
+                                    padding: 8px;
+                                    display: none;
+                                    .setting-profile:hover {
+                                          color: white;
+                                    }
+                                    .option-profile {
+                                          display: flex;
+                                          width: 100%;
+                                          height: 48px;
+                                          margin-bottom: 4px;
+                                          background-color: #f3e278;
+                                          display: flex;
+                                          border-radius: 8px;
+                                          align-items: center;
+                                          justify-content: center;
+                                          cursor: pointer;
+                                    }
+                                    .option-profile:hover {
+                                          background-color: #fadb06;
+                                          color: white;
+                                    }
+                                    .setting-password:hover {
+                                          color: white;
+                                    }
+                                    .option-password {
+                                          display: flex;
+                                          width: 100%;
+                                          height: 48px;
+                                          margin-bottom: 4px;
+                                          background-color: #f3e278;
+                                          display: flex;
+                                          border-radius: 8px;
+                                          align-items: center;
+                                          justify-content: center;
+                                          cursor: pointer;
+                                    }
+                                    .option-password:hover {
+                                          background-color: #fadb06;
+                                          color: white;
+                                    }
+                              }
+                              &:hover {
+                                    color: #ff5f29;
+                              }
+                        }
+                        .user-setting:hover .option-setting {
+                              display: block;
+                        }
+                        .user-setting::before {
+                              content: "";
+                              display: block;
+                              width: 130px;
+                              height: 16px;
+                              // background-color: red;
+                              position: absolute;
+                              bottom: 4px;
+                        }
+                  }
+                  .language {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 16px;
+                        .language-en {
+                              margin-left: 8px;
+                        }
+                  }
+            }
+      }
+}

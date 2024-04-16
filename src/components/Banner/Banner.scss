@@ -1,0 +1,192 @@
+/** @format */
+
+.wrap-banner {
+      position: absolute;
+      top: 84px;
+      width: 80%;
+      margin: 0 10%;
+      // background-color: rgb(195, 185, 185);
+      height: 90%;
+      z-index: 1;
+      .banner {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            .wrap-tabs {
+                  width: 32%;
+                  * {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                  }
+                  .tabs {
+                        //   position: relative;
+                        height: 100%;
+                        .row-tab {
+                              display: flex;
+                              justify-content: space-between;
+                              margin-top: 8px;
+                        }
+                  }
+                  .tabs .line {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 6px;
+                        border-radius: 15px;
+                        background-color: #323233;
+                        transition: all 0.2s ease;
+                  }
+                  .image-tab {
+                        width: 150px;
+                        height: 150px;
+                  }
+                  .tab-item {
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        width: 220px;
+                        height: 180px;
+                        padding: 16px 20px 10px 20px;
+                        font-size: 1.1rem;
+                        color: #323233;
+                        background-color: #fff;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        border-bottom: 5px solid transparent;
+                        border-radius: 16px;
+                        opacity: 0.7;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                        .icon-tab {
+                              width: 80%;
+                              height: 80%;
+                        }
+                        .food-name {
+                              font-size: 1.4rem;
+                        }
+                        &:hover {
+                              .icon-tab {
+                                    border-radius: 12px;
+                              }
+                        }
+                  }
+                  .tab-icon {
+                        font-size: 24px;
+                        margin-right: 8px;
+                        width: 32px;
+                        position: relative;
+                        top: 2px;
+                  }
+                  .tab-item:hover {
+                        opacity: 1;
+                        background-color: rgba(196, 117, 143, 0.05);
+                        border-color: rgba(194, 53, 100, 0.1);
+                  }
+                  .tab-item.active {
+                        opacity: 1;
+                  }
+                  .wrap-product {
+                        margin: 0 auto;
+                        width: 80%;
+                  }
+            }
+            .tab-content {
+                  // background-color: #e56868;
+                  width: 64%;
+            }
+            .tab-pane {
+                  color: #000000;
+                  display: none;
+                  height: 100%;
+            }
+            .tab-pane.active {
+                  display: block;
+                  .wrap-items {
+                        width: 100%;
+                        height: 800px;
+                        border-radius: 16px;
+                        .cover-item {
+                              height: 100%;
+                              width: 48%;
+                              border-radius: 16px;
+                              .item {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: white;
+                                    border-radius: 16px;
+                                    .item-image {
+                                          width: 100%;
+                                          padding: 16px;
+                                          border-radius: 24px;
+                                    }
+                              }
+                        }
+                  }
+            }
+            .tab-pane h2 {
+                  font-size: 24px;
+                  margin-bottom: 8px;
+            }
+            .item-product {
+                  padding: 12px;
+                  .image-product {
+                        width: 100%;
+                        height: 48%;
+                        border-top-right-radius: 12px;
+                        border-top-left-radius: 12px;
+                  }
+                  .name-product {
+                        text-align: center;
+                        font-size: 2.2rem;
+                        margin: 8px 0;
+                  }
+                  .info-eatery {
+                        display: flex;
+                        align-items: center;
+                        .avatar-eatery {
+                              width: 80px;
+                              padding: 4px;
+                        }
+                        .eatery {
+                              margin: 4px 0;
+                              p {
+                                    margin: 4px;
+                              }
+                        }
+                  }
+                  .desc-food {
+                        p {
+                              margin: 0;
+                        }
+                        .rate {
+                              display: flex;
+                              .rate-star {
+                                    width: 20px;
+                                    height: 20px;
+                                    margin: 0 4px;
+                                    color: red;
+                              }
+                        }
+                  }
+                  .price-buy {
+                        text-align: center;
+                        .price {
+                              margin: 12px 0;
+                              font-size: 2rem;
+                        }
+                        .btn-buy {
+                              margin: 12px;
+                              padding: 8px 24px;
+                              font-size: 1.6rem;
+                              border: none;
+                              border-radius: 10px;
+                              outline: none;
+                              background-color: #0077ed;
+                              color: white;
+                        }
+                  }
+            }
+      }
+}

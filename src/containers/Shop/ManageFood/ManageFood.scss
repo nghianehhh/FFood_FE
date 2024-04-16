@@ -1,0 +1,137 @@
+/** @format */
+
+.wrap-container-product {
+      width: 100%;
+      .wrap-add-item-food {
+            display: flex;
+            justify-content: space-between;
+            .create-new-item-food {
+                  width: 66%;
+                  border: 1px solid sandybrown;
+                  .wrap-content-item {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        .choose-image-item-food {
+                              width: 32%;
+                              .text-image-new-item {
+                                    text-align: center;
+                              }
+                              .image-new-item {
+                                    margin: 0 auto;
+                                    width: 80%;
+                                    height: 300px;
+                                    border: 1px solid darkblue;
+                                    /** @format */
+                                    .wrap-choose-item {
+                                          display: flex;
+                                          flex-direction: column;
+                                          height: 100%;
+                                          .upload-item {
+                                                display: flex;
+                                                align-items: center;
+                                                .icon-upload {
+                                                      height: 30px;
+                                                      transition: height 250ms ease-in-out;
+                                                      &:hover {
+                                                            cursor: pointer;
+                                                            color: #2989ff;
+                                                            height: 32px;
+                                                      }
+                                                }
+                                          }
+                                          .contain-image-item {
+                                                width: 90%;
+                                                height: 80%;
+                                                box-shadow: 0 1px 6px #20212447;
+                                                margin: 4px 8px;
+                                                .image-item {
+                                                      background-size: 120px;
+                                                      background-position: center center;
+                                                      background-repeat: no-repeat;
+                                                      height: 100%;
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+                        .wrap-nFood-price {
+                        }
+                  }
+                  .wrap-desc-item-food {
+                        width: 37.5%;
+                        .desc-item-food {
+                              width: 100%;
+                              min-height: 240px;
+                        }
+                  }
+                  .btn {
+                        display: flex;
+                        justify-content: center;
+                        .btn-create-item {
+                              text-align: center;
+                              margin: 4px;
+                        }
+                        .btn-cancel {
+                              margin: 4px;
+                        }
+                  }
+            }
+            .history-item-just-new-add {
+                  display: flex;
+                  align-items: center;
+                  width: 30%;
+                  .image-item-just-new-add {
+                        width: 52%;
+                        .image {
+                              border: 1px solid salmon;
+                              width: 100%;
+                              height: 300px;
+                        }
+                  }
+                  .wrap-btn {
+                        display: flex;
+                        flex-direction: column;
+                        .remove {
+                              margin: 4px;
+                        }
+                        .edit {
+                              margin: 4px;
+                        }
+                  }
+            }
+      }
+      .row-foods {
+            display: flex;
+            padding: 8px;
+            flex-wrap: wrap;
+            align-self: stretch;
+            gap: 8px;
+            background-color: transparent;
+            .col-food {
+                  width: 16.2%;
+                  height: 360px;
+                  min-height: 360px;
+                  border: 1px solid #2989ff;
+                  // max-width: 200px;
+                  .image-description {
+                        width: 100%;
+                        height: 220px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        border: 1px solid red;
+                  }
+                  .descFood {
+                        max-height: 66px; /* Đặt giới hạn chiều cao tối đa */
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        display: -webkit-box;
+                  }
+
+                  // .expanded {
+                  //       max-height: none; /* Hiển thị toàn bộ nội dung khi đã mở rộng */
+                  // }
+            }
+      }
+}
